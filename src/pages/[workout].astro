@@ -1,0 +1,56 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { WORKOUTS } from "../data/workouts";
+
+export function getStaticPaths() {
+    // Create a path for each workout
+    return Object.keys(WORKOUTS).map(workoutName => ({
+        params: {
+            // Convert workout name to URL-friendly format
+            workout: workoutName.toLowerCase().replace(/ /g, "-")
+        },
+        // Pass the original workout name as a prop
+        props: { workoutName }
+    }));
+}
+
+// Get the props passed from getStaticPaths
+const { workoutName } = Astro.props;
+const exercises = WORKOUTS[workoutName as keyof typeof WORKOUTS];
+
+// If workout doesn't exist, return 404
+if (!exercises) {
+    return Astro.redirect('/404');
+}
+
+
+---
+
+<Layout>
+    <div class="p-4">
+        <h1 class="text-2xl font-bold mb-6">{workoutName}</h1>
+        <div class="grid gap-4">
+            {exercises.map((exercise) => (
+                <div class="bg-white rounded-lg shadow-md p-4">
+                    <h2 class="text-xl font-semibold mb-2">{exercise.exercise}</h2>
+                    <div class="grid grid-cols-2 gap-2 text-gray-600">
+                        <p><span class="font-semibold">Sets:</span> {exercise.sets}</p>
+                        <p><span class="font-semibold">Reps:</span> {exercise.reps}</p>
+                        <p><span class="font-semibold">Rest:</span> {exercise.rest}</p>
+                        {exercise.equipment && 
+                            <p><span class="font-semibold">Equipment:</span> {exercise.equipment}</p>
+                        }
+                        {exercise.notes && 
+                            <p class="col-span-2"><span class="font-semibold">Notes:</span> {exercise.notes}</p>
+                        }
+                        {exercise.video && 
+                            <p class="col-span-2">
+                                <a href={exercise.video} class="text-blue-500 hover:underline" target="_blank">Watch Video</a>
+                            </p>
+                        }
+                    </div>
+                </div>
+            ))}
+        </div>
+    </div>
+</Layout> 
