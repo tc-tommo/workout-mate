@@ -1,11 +1,370 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Welcome from "../components/Welcome.astro";
+import Layout from "../layouts/Layout.astro";
+import "../styles/global.css";
+
+
+// This is baked in for now.
+const WORKOUTS = {
+	Beginner: [
+		{
+			exercise: "Goblet Squats",
+			equipment: "Dumbell 10-20kg",
+			sets: 3,
+			reps: 10,
+			rest: "00:30",
+			weight: "",
+			video: "https://photos.app.goo.gl/HQhGyCpWCfQ3i6e67",
+			notes: "Hold the weight straight out in front",
+		},
+		{
+			exercise: "Supported Dips",
+			equipment: "Dip Bars",
+			sets: 4,
+			reps: 10,
+			rest: "00:30",
+			weight: "",
+			video: "",
+			notes: "",
+		},
+		{
+			exercise: "Press Up",
+			equipment: "",
+			sets: 3,
+			reps: 10,
+			rest: "00:30",
+			weight: "",
+			video: "",
+			notes: "",
+		},
+		{
+			exercise: "Incline pullup",
+			equipment: "Hanging Bar",
+			sets: 4,
+			reps: 15,
+			rest: "00:30",
+			weight: "",
+			video: "",
+			notes: "",
+		},
+		{
+			exercise: "S.L Hip Thrust",
+			equipment: "Yoga block",
+			sets: 3,
+			reps: 15,
+			rest: "00:30",
+			weight: "",
+			video: "",
+			notes: "",
+		},
+		{
+			exercise: "Side Plank",
+			equipment: "",
+			sets: 3,
+			reps: "00:30",
+			rest: "00:15",
+			weight: "",
+			video: "",
+			notes: "",
+		},
+	],
+
+	Intermediate: [
+		{
+			exercise: "Back Squat",
+			equipment: "Barbell",
+			sets: 3,
+			reps: 10,
+			rest: "00:30",
+			weight: "",
+			video: "https://photos.app.goo.gl/KYyRNLxb6EG68Aw58",
+			notes: "",
+		},
+		{
+			exercise: "Dips",
+			equipment: "Dip station",
+			sets: 3,
+			reps: 12,
+			rest: "00:30",
+			weight: "",
+			video: "",
+			notes: "",
+		},
+		{
+			exercise: "OH Press",
+			equipment: "Dumbells x2",
+			sets: 3,
+			reps: 10,
+			rest: "00:30",
+			weight: "",
+			video: "",
+			notes: "",
+		},
+		{
+			exercise: "Pull up",
+			equipment: "Pullup Bar",
+			sets: 3,
+			reps: 5,
+			rest: "00:30",
+			weight: "",
+			video: "",
+			notes: "",
+		},
+		{
+			exercise: "Wall supported SL RDL",
+			equipment: "Dumbell",
+			sets: 3,
+			reps: 10,
+			rest: "00:30",
+			weight: "",
+			video: "https://photos.app.goo.gl/DXX6fGj5JdD9w2f3A",
+			notes: "",
+		},
+		{
+			exercise: "Weighted Side plank",
+			equipment: "Dumbell/Corebag",
+			sets: 3,
+			reps: "00:45",
+			rest: "00:15",
+			weight: "",
+			video: "",
+			notes: "",
+		},
+	],
+	
+	Advanced: [
+		{
+			exercise: "Back Squat",
+			equipment: "Barbell",
+			sets: 3,
+			reps: 5,
+			rest: "00:30",
+			weight: "",
+			video: "https://photos.app.goo.gl/KYyRNLxb6EG68Aw58",
+			notes: "",
+		},
+		{
+			exercise: "Dips",
+			equipment: "Dip station",
+			sets: 3,
+			reps: 10,
+			rest: "00:30",
+			weight: "",
+			video: "",
+			notes: "",
+		},
+		{
+			exercise: "Dynamic OH Press",
+			equipment: "Dumbells x2",
+			sets: 3,
+			reps: 5,
+			rest: "00:30",
+			weight: "",
+			video: "",
+			notes: "",
+		},
+		{
+			exercise: "Pull up",
+			equipment: "Pullup Bar",
+			sets: 3,
+			reps: 6,
+			rest: "00:30",
+			weight: "",
+			video: "",
+			notes: "",
+		},
+		{
+			exercise: "Wall supported SL RDL",
+			equipment: "Dumbell",
+			sets: 3,
+			reps: 10,
+			rest: "00:30",
+			weight: "",
+			video: "https://photos.app.goo.gl/DXX6fGj5JdD9w2f3A",
+			notes: "",
+		},
+		{
+			exercise: "Weighted Side plank",
+			equipment: "Dumbell/Corebag",
+			sets: 3,
+			reps: "01:00",
+			rest: "00:15",
+			weight: "",
+			video: "",
+			notes: "",
+		},
+	],
+	
+	Tumbler: [
+		{
+			exercise: "Back Squat(Dynamic Effort)",
+			equipment: "Barbell",
+			sets: 3,
+			reps: 3,
+			rest: "00:40",
+			weight: "",
+			video: "",
+			notes: "",
+		},
+		{
+			exercise: "Hip Rotation",
+			equipment: "Dumbell",
+			sets: 3,
+			reps: 10,
+			rest: "00:20",
+			weight: "",
+			video: "",
+			notes: "",
+		},
+		{
+			exercise: "Hanging Crunch",
+			equipment: "Pullup bar",
+			sets: 3,
+			reps: 8,
+			rest: "00:30",
+			weight: "",
+			video: "",
+			notes: "",
+		},
+		{
+			exercise: "Landmine rotations",
+			equipment: "Barbell, landmine rig",
+			sets: 3,
+			reps: 8,
+			rest: "00:40",
+			weight: "",
+			video: "",
+			notes: "",
+		},
+		{
+			exercise: "Copenhagen Plank",
+			equipment: "Bodyweight/Dumbell",
+			sets: 3,
+			reps: 10,
+			rest: "00:20",
+			weight: "",
+			video: "",
+			notes: "",
+		},
+	],
+	
+	"Integrated Plyo": [
+		{
+			exercise: "Landings",
+			equipment: "Box",
+			sets: 3,
+			reps: 3,
+			rest: "01:00",
+			weight: "",
+			video: "",
+			notes: "",
+		},
+		{
+			exercise: "Rebounds",
+			equipment: "2 Boxes",
+			sets: 3,
+			reps: 4,
+			rest: "01:00",
+			weight: "",
+			video: "",
+			notes: "",
+		},
+		{
+			exercise: "Box Jumps",
+			equipment: "Box",
+			sets: 3,
+			reps: 2,
+			rest: "01:00",
+			weight: "",
+			video: "",
+			notes: "",
+		},
+		{
+			exercise: "Rope Climb",
+			equipment: "Rope",
+			sets: 3,
+			reps: 6,
+			rest: "00:30",
+			weight: "",
+			video: "",
+			notes: "",
+		},
+		{
+			exercise: "45° Side Crunch",
+			equipment: "Box",
+			sets: 3,
+			reps: 10,
+			rest: "00:30",
+			weight: "",
+			video: "",
+			notes: "",
+		},
+	],
+	
+	"Wrist Protection": [
+		{
+			exercise: "Dead hang",
+			equipment: "Pullup bar",
+			sets: 3,
+			reps: "00:40",
+			rest: "00:30",
+			weight: "",
+			video: "",
+			notes: "",
+		},
+		{
+			exercise: "Reverse grip curls",
+			equipment: "Dumbell",
+			sets: 3,
+			reps: 10,
+			rest: "00:30",
+			weight: "",
+			video: "",
+			notes: "",
+		},
+	],
+	
+	"Ankle Stabillity": [
+		{
+			exercise: "Tib Raises",
+			equipment: "Bodyweight/Dumbell",
+			sets: 3,
+			reps: 10,
+			rest: "00:30",
+			weight: "",
+			video: "",
+			notes: "",
+		},
+		{
+			exercise: "Heel raises",
+			equipment: "Bodyweight/Dumbell",
+			sets: 3,
+			reps: 10,
+			rest: "00:30",
+			weight: "",
+			video: "",
+			notes: "",
+		},
+	],
+};
+
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<Welcome />
+	<div id="workout-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
+		{Object.entries(WORKOUTS).map(([name, exercises]) => (
+			<div id="workout-card" class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300" onclick={
+				`window.location.href = '/workout/${name}'`
+			}>
+				<h2 class="text-xl font-bold mb-3 text-gray-800">{name}</h2>
+				<div id="workout-details" class="text-gray-600">
+					<p class="mb-2"><span class="font-semibold">Exercises:</span> {exercises.length}</p>
+					<p><span class="font-semibold">Equipment:</span> {[...new Set(exercises.map(ex => ex.equipment).filter(Boolean))].join(', ')}</p>
+				</div>
+			</div>
+		))}
+	</div>
 </Layout>
