@@ -1,7 +1,10 @@
+<!-- export const prerender = false; -->
+
 ---
 import Layout from "../layouts/Layout.astro";
 import WorkoutView from "../components/WorkoutView";
 import { WORKOUTS } from "../data/workouts";
+import type { Exercise } from "../types"
 
 export function getStaticPaths() {
     // Create a path for each workout
@@ -28,5 +31,5 @@ if (!exercises) {
 ---
 
 <Layout>
-    <WorkoutView client:load exercises={exercises} />
+    <WorkoutView client:load exercises={exercises as Exercise[]} />
 </Layout> 

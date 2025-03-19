@@ -32,5 +32,9 @@ export default function Timer({ duration, onComplete }: TimerProps) {
     return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
   }
 
-  return <div>{formatTime(timeLeft)}</div>;
+  return (
+    <div>
+      {formatTime(timeLeft)}
+    </div>
+  );
 } 
