@@ -13,7 +13,10 @@ So the rationale for this is that we want it to be as familiar to as many users 
 
 ## Main Features
 
-### Load from Spreadsheet
+### Data source
+- [x] JSON Plaintext format
+
+## From Spreadsheet
 - [ ] Users can load a workout from a spreadsheet
 - [ ] Parse the spreadsheet and flexible/custom quantities like metrics
 
