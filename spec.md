@@ -14,47 +14,47 @@ So the rationale for this is that we want it to be as familiar to as many users 
 ## Main Features
 
 ### Home Screen
-- Grid layout of cards representing different workout categories
-- Categories in the example data include: Beginner, Intermediate, Advanced, Tumbler, Plyo, etc.
-- Each card displays the name of the workout category
+- [x] Grid layout of cards representing different workout categories
+- [x] Categories in the example data include: Beginner, Intermediate, Advanced, Tumbler, Plyo, etc.
+- [x] Each card displays the name of the workout category
 
 ### Workout View
-- Instagram/Snapchat story-style interface
-- Displays:
-  - Looping video of the current exercise
-  - Set number
-  - Rep count or timer
+- [x] Instagram/Snapchat story-style interface
+- [x] Displays:
+  - [x] Looping video of the current exercise
+  - [x] Set number
+  - [x] Rep count or timer
 
 ### Navigation
-- Tap right side of screen: Advance to next set or rest period
-- Tap left side of screen: Go to previous set or rest period
-- Swipe right to left: Move to next exercise
-- Swipe left to right: Move to previous exercise
+- [x] Tap right side of screen: Advance to next set or rest period
+- [x] Tap left side of screen: Go to previous set or rest period
+- [x] Swipe right to left: Move to next exercise
+- [x] Swipe left to right: Move to previous exercise
 
 ### Exercise Types
-- Rep-based exercises: Display number of repetitions to complete
-- Time-based exercises: Display countdown timer (e.g., planks, isometric holds)
-- Stopwatch if its a rep based exercise
-- Countdown timer if its a time based exercise (automatic transition to next set when timer completes)
+- [x] Rep-based exercises: Display number of repetitions to complete
+- [x] Time-based exercises: Display countdown timer (e.g., planks, isometric holds)
+- [x] Stopwatch if its a rep based exercise
+- [x] Countdown timer if its a time based exercise (automatic transition to next set when timer completes)
 
 ### Rest Periods
-- Timer displayed between sets
-- Automatic transition to next set when timer completes
+- [x] Timer displayed between sets
+- [x] Automatic transition to next set when timer completes
 
 ## Extensions if there's time
-- Progress tracking
-    - Users can swipe up from the rest view to record metrics for their previous exercise, similar to adding a comment to a story but with a multi input form
-    - Metrics to track include:
-      - Number of reps completed
-      - Weight used
-      - Other  exercise data for example bar velocity, etc.
-    - All data will be stored locally on the user's device
-    - Options to export data for:
-      - Synchronization with other devices
-      - Sharing with coaches or training partners
-    - Primary use case is designed for mobile phone workouts
-    - A key motivation for this design approach is ensuring users maintain complete control over their data and selection options, which is a priority for this redesign
-- Social features (sharing, leaderboard)
+- [ ] Progress tracking
+    - [ ] Users can swipe up from the rest view to record metrics for their previous exercise, similar to adding a comment to a story but with a multi input form
+    - [x] Metrics to track include:
+      - [x] Number of reps completed
+      - [x] Weight used
+      - [ ] Other  exercise data for example bar velocity, etc.
+    - [ ] All data will be stored locally on the user's device
+    - [ ] Options to export data for:
+      - [ ] Synchronization with other devices
+      - [ ] Sharing with coaches or training partners
+    - [ ] Primary use case is designed for mobile phone workouts
+    - [ ] A key motivation for this design approach is ensuring users maintain complete control over their data and selection options, which is a priority for this redesign
+- [ ] Social features (sharing, leaderboard)
 
 
 
