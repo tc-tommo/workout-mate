@@ -7,7 +7,7 @@ export const WORKOUTS = {
 			reps: 10,
 			rest: 30,
 			weight: "",
-			video: "https://video-downloads.googleusercontent.com/ADGPM2n8xvs-alfvn1trdh3o6AkHwA-JhHXTkmo5G7ShJ_de1EUbMJyT7q-JGirpisGnELfPnfhqSA90S0oInGfxo8OxqQeBHT7NnB836J2l9efhyX-j93iWUMFALLpvglz1Q-z3s0zL7CPYbITFEaGzWfkTnj8NUPyWuOwdDvbwDt9sAAFCtA2zb-nXIZUTQuqs74ESjJ2_rap9NLW8JSDLDpqmbSvfsQcsg4MaDjpPDilJhqSN_jAaYwotJHXbDGHjwGjph7AfuRbg9DF1S0jNsdHhlD66F46Rx_ungowaOS_3IGT21o-XrICV-tKwc6b8iflvXgNRCLuvqvBbIh2adPJ188a5sajogw8gvxqu9i9wOTqsK52NsKmC8SQDnNRaMnFCvw1xVAeZpCX81OH5Mn-uUmL0LLCiA5g7GBcQLR7Ps87GK1XTS3J2MfCtlnMYzMxMZI1w67igX4wGFETtUmIZ3Chu_Go_uCErUDl8jBH5pb4QBzM532gz___SIbv3SffLYHJ9_75nsLDQlyLb8vAPX1gAlttnJpbEWILz24PB_D-F7XFVvpTCMlps2HlTxzpAmtidieN_C89Mjx4tVhGef4SIa6zchOZO-5Zt2h-cBWwLMAdLWUjbuLeUp-nWiJBEZOoq000OkQnAdE0Q_5Uj2YoP3ZxTtG2dodALE6oCFJW6mU4Dgw7YPtQarLcAr-anSChdZ-jmXETuMtgKDUCJyUwW4ErUGe11OgqK4jfyTXaSJlTAwX44_1uBTchQEe108WekxEIlzVBUgXbEMzv3vs0_1iWGnQtxLIfpjMNFeTcClA9ycYH2xNtttl3MrwplRQakXzA7EEWf3jXY-sTX3DydaQKVVhZ26uXk-taBQ2xcZsFc4h3JMUGsM_fGn0wA7Wrbb0vrz1YlWWvFTwfuUCQvJd-NjUJn9ZtNZugbtb4R_zz20V-7RGvZ6U9DWTNTgg-PXZXXGB8q11ypH6WzuJlJUx-Rbi9lE3eH3UIlA2efYwLq_uFtIpBWbZ9I-4G8Tr24Ar9lSjTsWz2GC8Ets59yx_Rgd8G8lDGcVxCY_qLBPaqM3BA1Gsre4JRUlo_as1Ls?authuser=0",
+			video: "https://workout.tommo.page/example/data/videos/goblet-squat.webm",
 			notes: "Hold the weight straight out in front",
 			perSetMetrics: [{name: "reps", units: "count"}, {name: "weight", units: "kg"}],
 		},
@@ -77,7 +77,7 @@ export const WORKOUTS = {
 			reps: 10,
 			rest: 30,
 			weight: "",
-			video: "https://photos.app.goo.gl/KYyRNLxb6EG68Aw58",
+			video: "https://workout.tommo.page/example/data/videos/back-squat.webm",
 			notes: "",
 		},
 		{
@@ -119,7 +119,7 @@ export const WORKOUTS = {
 			reps: 10,
 			rest: 30,
 			weight: "",
-			video: "https://photos.app.goo.gl/DXX6fGj5JdD9w2f3A",
+			video: "https://workout.tommo.page/example/data/videos/wall-sl-rdl.webm",
 			notes: "",
 		},
 		{
@@ -142,7 +142,7 @@ export const WORKOUTS = {
 			reps: 5,
 			rest: 30,
 			weight: "",
-			video: "https://photos.app.goo.gl/KYyRNLxb6EG68Aw58",
+			video: "https://workout.tommo.page/example/data/videos/back-squat.webm",
 			notes: "",
 		},
 		{
@@ -182,7 +182,7 @@ export const WORKOUTS = {
 			reps: 10,
 			rest: 30,
 			weight: "",
-			video: "https://photos.app.goo.gl/DXX6fGj5JdD9w2f3A",
+			video: "https://workout.tommo.page/example/data/videos/wall-sl-rdl.webm",
 			notes: "",
 		},
 		{
