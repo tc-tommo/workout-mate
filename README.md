@@ -13,6 +13,11 @@ So the rationale for this is that we want it to be as familiar to as many users 
 
 ## Main Features
 
+### Load from Spreadsheet
+- [ ] Users can load a workout from a spreadsheet
+- [ ] Parse the spreadsheet and flexible/custom quantities like metrics
+
+
 ### Home Screen
 - [x] Grid layout of cards representing different workout categories
 - [x] Categories in the example data include: Beginner, Intermediate, Advanced, Tumbler, Plyo, etc.
