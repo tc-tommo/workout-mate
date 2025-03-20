@@ -5,7 +5,6 @@ import react from "@astrojs/react";
 // https://astro.build/config
 export default defineConfig({
   site: 'https://workout.tommo.page',
-  base: 'workout-mate',
   vite: {
     plugins: [tailwindcss()],
   },
