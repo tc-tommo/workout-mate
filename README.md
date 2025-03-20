@@ -65,7 +65,7 @@ So the rationale for this is that we want it to be as familiar to as many users 
 
 
 # Structure
-
+```
 /my-workout-app
 ├── public
 │   ├── index.html                 // HTML entry point for the React app
@@ -91,7 +91,7 @@ So the rationale for this is that we want it to be as familiar to as many users 
 │   └── spec.md                    // Your project specification documentation
 ├── package.json                   // Project configuration and dependencies
 └── README.md                      // Project overview/instructions
-
+```
 
 ## Framework
 - Astro
